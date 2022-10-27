@@ -8,15 +8,65 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var shadowColor: Color = .white
+    @State private var shadowRadius: CGFloat = 8
+    @State private var shadowX: CGFloat = 20
+    @State private var shadowY: CGFloat = 0
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        
+        ZStack{
+            
+            
+            
+            Image("background")
+            
+            VStack{
+                Image("avatar")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                //    .clipped()
+                    .clipShape(Circle())
+                //
+                
+                    .shadow(color: shadowColor, radius: shadowRadius, x: shadowX, y: shadowY
+                    )
+                
+                    .onAppear() {
+                        withAnimation(.linear(duration: 2)) {
+                            shadowColor = .gray
+                            shadowRadius = 2
+                            shadowX = -5
+                            shadowY = 5
+                        }
+                    }
+                    .padding()
+              
+                Text("Hoton Alharthi")
+                    .foregroundColor(.white)
+                   
+                    .font(.system(size: 50))
+                
+                    .padding()
+                Text("hi , hi")
+                    .foregroundColor(.white)
+                    .font(.system(size: 25))
+                
+                
+                
+            }
+        
+            
         }
-        .padding()
+     
+        
+        
+        
+        
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
