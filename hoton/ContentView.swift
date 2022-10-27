@@ -49,7 +49,7 @@ struct ContentView: View {
                     .font(.system(size: 50))
                 
                     .padding()
-                Text("hi , hi , and hi")
+                Text("Hi Omnya")
                     .foregroundColor(.white)
                     .font(.system(size: 25))
                 
