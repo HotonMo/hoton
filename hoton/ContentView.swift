@@ -48,10 +48,11 @@ struct ContentView: View {
                    
                     .font(.system(size: 50))
                 
-                    .padding()
-                Text("Hi Omnya")
+                   // .padding()
+                Text(" Fresh CS graduate, an artist and gamer")
                     .foregroundColor(.white)
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
+                    .padding()
                 
                 
                 
